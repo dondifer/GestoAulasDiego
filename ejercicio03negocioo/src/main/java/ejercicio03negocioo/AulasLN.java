@@ -54,12 +54,14 @@ public class AulasLN {
 	public void asignarAlumnoAAula(Alumno alumno, String nombreaula) throws Exception {
 		Set<PuestoDeTrabajo> puestos = aulaDao.getAula(nombreaula).getPuestosDeAlumnos();
 		Iterator<PuestoDeTrabajo> itr = puestos.iterator();
+		
 		while (itr.hasNext()) {
 			PuestoDeTrabajo puestoDeTrabajo = itr.next();
 			if(puestoDeTrabajo.getPersona() == null) {
 				puestoDeTrabajo.setPersona(alumno);
+				return;
 			}
-			return;
+			
 		}
 		throw new Exception("No hay sitio en el aula!");
 	}

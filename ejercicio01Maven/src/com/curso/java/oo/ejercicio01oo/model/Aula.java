@@ -10,6 +10,13 @@ public class Aula {
 	private PuestoDeTrabajo puestoDelProfesor;
 	private Set<PuestoDeTrabajo> puestosDeAlumnos;
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Aula [nombre=" + nombre + ", proyector=" + proyector + ", pizarra=" + pizarra + ", puestoDelProfesor="
+				+ puestoDelProfesor + ", puestosDeAlumnos=" + puestosDeAlumnos + "]";
+	}
 	public Aula(String nombre, boolean proyector, boolean pizarra, Set<PuestoDeTrabajo> puestosDeAlumnos) {
 		super();
 		this.nombre = nombre;

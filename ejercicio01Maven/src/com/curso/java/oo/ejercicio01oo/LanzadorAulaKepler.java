@@ -21,14 +21,14 @@ public class LanzadorAulaKepler {
 		aula.getPuestosDeAlumnos().add(new PuestoDeTrabajo(false));
 		System.out.println("algo");
 		aula.setPuestosDeAlumnos(aula.getPuestosDeAlumnos());
-		aula.getPuestoDelProfesor().setPersona(new Profesor());
+		//aula.getPuestoDelProfesor().setPersona(new Profesor());
 		Set<PuestoDeTrabajo> puestos = aula.getPuestosDeAlumnos();
 		Iterator<PuestoDeTrabajo> iterador = puestos.iterator();
 		int numeroDeAlumnos = 12;
 		while(iterador.hasNext() && numeroDeAlumnos > 0) {
 			PuestoDeTrabajo puestoActual = iterador.next();
 			if( puestoActual.isOrdenador()) {
-				puestoActual.setPersona(new Alumno());
+				//puestoActual.setPersona(new Alumno());
 				numeroDeAlumnos--;
 			}
 		}

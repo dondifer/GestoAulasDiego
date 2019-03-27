@@ -17,9 +17,12 @@ public class ListDao implements IAulaDAO {
 
 	
 
-	public ListDao(ArrayList<Aula> arrayList) {
-		// TODO Auto-generated constructor stub
+	public ListDao() {
+		super();
+		this.edificio  = new ArrayList<Aula>();
 	}
+
+	
 
 	public void createAula(Aula aula) {
 		edificio.add(aula);
@@ -45,6 +48,7 @@ public class ListDao implements IAulaDAO {
 		for (int i = 0; i < edificio.size(); i++) {
 			if(edificio.get(i).getNombre()==nombre) {
 				edificio.remove(i);
+				System.out.println("Aula " + nombre + " eliminada");
 			}
 		}
 
