@@ -1,10 +1,9 @@
 package ejercicio03LanzadorMapa;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.curso.java.oo.ejercicio01oo.model.Alumno;
 import com.curso.java.oo.ejercicio01oo.model.Aula;
@@ -12,14 +11,16 @@ import com.curso.java.oo.ejercicio01oo.model.Profesor;
 import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
 
 import ejercicio03dao.IAulaDAO;
-import ejercicio03dao.ListDao;
-import ejercicio03dao.MapDao;
 import ejercicio03negocioo.AulasLN;
 
 public class LanzadorAulasMapa {
 	public static void main(String[] args) throws Exception {
+		
+		
+		
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beanDAOaula2.xml");
 
-		AulasLN negocio = new AulasLN(new MapDao());
+		AulasLN negocio = new AulasLN((IAulaDAO) applicationContext.getBean("MapAulaDao"));
 
 		HashSet<PuestoDeTrabajo> puestos1 = new HashSet<PuestoDeTrabajo>();
 		HashSet<PuestoDeTrabajo> puestos2 = new HashSet<PuestoDeTrabajo>();

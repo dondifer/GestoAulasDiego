@@ -24,6 +24,7 @@ public class Aula {
 		this.pizarra = pizarra;
 		this.puestosDeAlumnos = puestosDeAlumnos;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}

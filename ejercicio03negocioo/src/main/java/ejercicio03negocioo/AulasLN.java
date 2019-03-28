@@ -16,12 +16,18 @@ import java.util.Set;
 import ejercicio03dao.IAulaDAO;
 
 public class AulasLN {
-	private IAulaDAO aulaDao;
+	private IAulaDAO aulaDao ;
+	
+	
+	
+	
 
 	public AulasLN(IAulaDAO aulaDao) {
 		super();
 		this.aulaDao = aulaDao;
 	}
+
+
 
 	public void nuevoAula(Aula aula) {
 

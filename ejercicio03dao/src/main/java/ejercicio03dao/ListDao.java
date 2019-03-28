@@ -17,12 +17,20 @@ public class ListDao implements IAulaDAO {
 
 	
 
-	public ListDao() {
-		super();
-		this.edificio  = new ArrayList<Aula>();
-	}
+//	public ListDao() {
+//		super();
+//		this.edificio  = new ArrayList<Aula>();
+//	}
 
 	
+
+	public List<Aula> getEdificio() {
+		return edificio;
+	}
+
+	public void setEdificio(List<Aula> edificio) {
+		this.edificio = edificio;
+	}
 
 	public void createAula(Aula aula) {
 		edificio.add(aula);

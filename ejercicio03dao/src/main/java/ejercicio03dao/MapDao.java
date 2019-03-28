@@ -14,16 +14,24 @@ public class MapDao implements IAulaDAO {
 
 
 
-	public MapDao() {
-		super();
-		this.edificio = new HashMap<String,Aula>();
+//	public MapDao() {
+//		super();
+//		this.edificio = new HashMap<String,Aula>();
+//	}
+
+
+
+
+
+
+
+	public Map<String, Aula> getEdificio() {
+		return edificio;
 	}
 
-
-
-
-
-
+	public void setEdificio(Map<String, Aula> edificio) {
+		this.edificio = edificio;
+	}
 
 	public void createAula(Aula aula) {
 

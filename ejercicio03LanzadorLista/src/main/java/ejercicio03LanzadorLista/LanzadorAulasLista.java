@@ -5,6 +5,9 @@ import java.util.Collection;
 import java.util.HashSet;
 //import java.util.Set;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.curso.java.oo.ejercicio01oo.model.Alumno;
 import com.curso.java.oo.ejercicio01oo.model.Aula;
 import com.curso.java.oo.ejercicio01oo.model.Persona;
@@ -15,11 +18,30 @@ import ejercicio03dao.IAulaDAO;
 import ejercicio03dao.ListDao;
 import ejercicio03negocioo.AulasLN;
 
+
+
+
 public class LanzadorAulasLista {
+	
+	public static ApplicationContext context;
+	
+	static {
+		context = new ClassPathXmlApplicationContext("beanDAOaula1.xml");
+	}
+	
+	
 	public static void main(String[] args) throws Exception {
 
-		AulasLN negocio = new AulasLN(new ListDao());
-
+		
+		
+		
+		
+//		AulasLN negocio = new AulasLN((IAulaDAO) context.getBean("ListAulaDao"));
+		
+		
+		AulasLN negocio =  (AulasLN) context.getBean("negocioAulasLista");
+		
+		
 		HashSet<PuestoDeTrabajo> puestos1 = new HashSet<PuestoDeTrabajo>();
 		HashSet<PuestoDeTrabajo> puestos2 = new HashSet<PuestoDeTrabajo>();
 		HashSet<PuestoDeTrabajo> puestos3 = new HashSet<PuestoDeTrabajo>();
@@ -27,6 +49,8 @@ public class LanzadorAulasLista {
 		Aula aula1 = new Aula("Kepler", true, true, puestos1);
 		Aula aula2 = new Aula("Galileo", true, true, puestos2);
 		Aula aula3 = new Aula("Newton", true, true, puestos3);
+		
+//		Aula aula4 = (Aula) context.getBean("nuevaAula");
 
 		Alumno alumno1 = new Alumno("Pedro");
 		// Alumno alumno2 = new Alumno("Maria");
@@ -57,6 +81,7 @@ public class LanzadorAulasLista {
 		negocio.nuevoAula(aula1);
 		negocio.nuevoAula(aula2);
 		negocio.nuevoAula(aula3);
+//		negocio.nuevoAula(aula4);
 
 		negocio.asignarAlumnoAAula(alumno1, "Kepler");
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	<bean id="miPrototipoDePersonilla" class="ejemplo05beans.beans2.Personilla" scope="prototype">
+	<property name="edad" value="18"></property>
+	
+	</bean>
+	
+	<bean id="Eustakio" class="ejemplo05beans.beans2.Personilla" scope="singleton">
+	<property name="comosellama" value="Eustakio"></property>
+	<property name="edad" value="18"></property>
+	<property name="peso" value="90.05"></property>
+	
+	</bean>
+
+
+<bean id="Maria" class="ejemplo05beans.beans2.Personilla" scope="singleton">
+	<property name="comosellama" value="Maria"></property>
+	<property name="edad" value="27"></property>
+	<property name="peso" value="50.15"></property>
+	
+	</bean>
+
+<bean id="listaPersonillas" class="java.util.ArrayList" scope="prototype" > </bean>
+
+
+
+</beans>
