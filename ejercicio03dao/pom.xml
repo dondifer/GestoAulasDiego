@@ -2,12 +2,38 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.curso.modelodao</groupId>
   <artifactId>ejercicio03dao</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
+  
+  
+    <properties>
+  
+  <!-- Se hace para cambiar la versión de java sin tener que copiar el Plugin -->
+   <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler.target>1.8</maven.compiler.target>
+  
+  
+  <!-- Esto lo hacemos para establecer el encoding de origen y del artefacto -->
+  <project.build.souceEncoding>UTF-8</project.build.souceEncoding>
+  <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+  
+  <!-- Esta propiedad me la acabo de inventar, y la uso como variable en dependencias -->
+  <spring.framework.version>5.1.5.RELEASE</spring.framework.version>
+  
+  
+  </properties>
+  
+  
+  
+  
+  
+  
+  
+  
   <dependencies>
   <dependency>
    <groupId>com.curso.modelodao</groupId>
   <artifactId>ejercicio01Maven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   
   </dependency>
   

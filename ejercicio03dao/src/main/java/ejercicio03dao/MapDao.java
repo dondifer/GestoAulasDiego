@@ -4,10 +4,15 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
 import com.curso.java.oo.ejercicio01oo.model.Aula;
-
+@Repository
 public class MapDao implements IAulaDAO {
-
+@Autowired
+@Qualifier("mapaAulas")
 	private Map<String, Aula> edificio ; 
 
 	

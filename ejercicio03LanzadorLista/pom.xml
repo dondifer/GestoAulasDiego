@@ -28,23 +28,16 @@
   
   
   <dependencies>
+  
   <dependency>
   <groupId>com.curso.modelodao</groupId>
   <artifactId>ejercicio03negocioo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   </dependency>
   
-  <dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>spring-context</artifactId>
-  <version>${spring.framework.version}</version>
-  </dependency>
+
   
-    <dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>spring-core</artifactId>
-  <version>${spring.framework.version}</version>
-  </dependency>
+ 
   
   
   </dependencies>

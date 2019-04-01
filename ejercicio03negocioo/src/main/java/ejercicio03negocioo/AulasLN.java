@@ -1,10 +1,12 @@
 package ejercicio03negocioo;
 
-import com.curso.java.oo.ejercicio01oo.model.Alumno;
-import com.curso.java.oo.ejercicio01oo.model.Aula;
+//import com.curso.java.oo.ejercicio01oo.model.Alumno;
+
+
+//import com.curso.java.oo.ejercicio01oo.model.Aula;
 //import com.curso.java.oo.ejercicio01oo.model.Persona;
-import com.curso.java.oo.ejercicio01oo.model.Profesor;
-import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
+//import com.curso.java.oo.ejercicio01oo.model.Profesor;
+//import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -13,19 +15,36 @@ import java.util.Iterator;
 //import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.curso.java.oo.ejercicio01oo.model.Alumno;
+import com.curso.java.oo.ejercicio01oo.model.Aula;
+import com.curso.java.oo.ejercicio01oo.model.Profesor;
+import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
+
 import ejercicio03dao.IAulaDAO;
+import ejercicio03dao.ListDao;
 
+@Service
 public class AulasLN {
-	private IAulaDAO aulaDao ;
+	
+	@Autowired
+	@Qualifier("ListDao")
+	
+	private ListDao aulaDao;
+	
+//	private IAulaDAO aulaDao ;
 	
 	
 	
 	
 
-	public AulasLN(IAulaDAO aulaDao) {
-		super();
-		this.aulaDao = aulaDao;
-	}
+//	public AulasLN(IAulaDAO aulaDao) {
+//		super();
+//		this.aulaDao = (ListDao) aulaDao;
+//	}
 
 
 

@@ -1,5 +1,10 @@
 package com.curso.java.oo.ejercicio01oo.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value = "prototype")
 public class Profesor extends Persona {
 	private boolean malaLeche;
 	
@@ -12,10 +17,10 @@ public class Profesor extends Persona {
 				+ "]";
 	}
 
-	public Profesor(String string,boolean malaLeche) {
-		super(string);
-		this.malaLeche = malaLeche;
-	}
+//	public Profesor(String string,boolean malaLeche) {
+//		super(string);
+//		this.malaLeche = malaLeche;
+//	}
 
 	public boolean isMalaLeche() {
 		return malaLeche;
