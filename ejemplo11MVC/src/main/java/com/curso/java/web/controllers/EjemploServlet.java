@@ -99,18 +99,16 @@ public class EjemploServlet extends HttpServlet {
 
 		Collection<Alumno> alumnosKepler = negocio.getAlumnosPorAula("Kepler");
 		Iterator<Alumno> itAlumns = alumnosKepler.iterator();
-		
+		itAlumns.next();
 
 		Alumno alu1 = itAlumns.next();
 		Alumno alu2 = itAlumns.next();
 		Alumno alu3 = itAlumns.next();
-		Alumno alu4 = itAlumns.next();
-		
 
 		request.setAttribute("alumno1", alu1);// context.getBean("mensajeSingleton")
 		request.setAttribute("alumno2", alu2);// context.getBean("mensajePrototype")
 		request.setAttribute("alumno3", alu3);// context.getBean("mensajeRequest")
-		request.setAttribute("alumno4", alu4);
+		// request.setAttribute("mensajeSession", context.getBean("mensajeSession"));
 		getServletContext().getRequestDispatcher("/WEB-INF/jsps/saludar.jsp").forward(request, response);
 
 	}

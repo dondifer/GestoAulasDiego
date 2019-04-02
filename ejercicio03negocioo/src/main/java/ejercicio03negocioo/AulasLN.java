@@ -53,6 +53,14 @@ public class AulasLN {
 		aulaDao.createAula(aula);
 	}
 
+	public ListDao getAulaDao() {
+		return aulaDao;
+	}
+
+	public void setAulaDao(ListDao aulaDao) {
+		this.aulaDao = aulaDao;
+	}
+
 	public Collection<Alumno> getAlumnosPorAula(String nombreAula) {
 		
 		
@@ -60,7 +68,9 @@ public class AulasLN {
 		Collection<PuestoDeTrabajo> puestos = aulaDao.getAula(nombreAula).getPuestosDeAlumnos();
 
 		for (PuestoDeTrabajo puesto : puestos) {
+			if(puesto.getPersona()!= null){
 			estudiante.add((Alumno) puesto.getPersona());
+			}
 		}
 		return estudiante;
 	}
