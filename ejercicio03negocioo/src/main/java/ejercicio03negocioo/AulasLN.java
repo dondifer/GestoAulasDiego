@@ -24,7 +24,6 @@ import com.curso.java.oo.ejercicio01oo.model.Aula;
 import com.curso.java.oo.ejercicio01oo.model.Profesor;
 import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
 
-import ejercicio03dao.IAulaDAO;
 import ejercicio03dao.ListDao;
 
 @Service

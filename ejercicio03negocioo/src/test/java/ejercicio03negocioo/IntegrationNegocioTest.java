@@ -17,7 +17,7 @@ import com.curso.java.oo.ejercicio01oo.model.PuestoDeTrabajo;
 
 import ejercicio03dao.ListDao;
 
-public class IntegrationTestNegocio {
+public class IntegrationNegocioTest {
 	
 	
 	@Before
@@ -26,7 +26,7 @@ public class IntegrationTestNegocio {
 	}
 
 	@Test
-	public void testnuevoAula() {
+	public void nuevoAulaTest() {
 		ListDao ejemplolistDao = new ListDao();
 		AulasLN negocio = new AulasLN();
 		List<Aula> edificio = new ArrayList<Aula>();
@@ -41,7 +41,7 @@ public class IntegrationTestNegocio {
 	
 	
 	@Test
-	public void testgetAlumnosPorAula() throws Throwable  {
+	public void getAlumnosPorAulaTest() throws Throwable  {
 		ListDao ejemplolistDao = new ListDao();
 		AulasLN negocio = new AulasLN();
 		List<Aula> edificio = new ArrayList<Aula>();
@@ -74,7 +74,7 @@ public class IntegrationTestNegocio {
 	}
 	
 	@Test
-	public void testgetProfesoresPorAula() {
+	public void getProfesoresPorAulaTest() {
 		
 		ListDao ejemplolistDao = new ListDao();
 		AulasLN negocio = new AulasLN();
@@ -103,7 +103,7 @@ public class IntegrationTestNegocio {
 	
 	
 	@Test
-	public void testasignarAlumnoAAula() throws Throwable {
+	public void asignarAlumnoAAulaTest() throws Throwable {
 		ListDao ejemplolistDao = new ListDao();
 		AulasLN negocio = new AulasLN();
 		List<Aula> edificio = new ArrayList<Aula>();
@@ -136,7 +136,7 @@ public class IntegrationTestNegocio {
 	}
 	
 	@Test
-	public void testeliminarAula() {
+	public void eliminarAulaTest() {
 		ListDao ejemplolistDao = new ListDao();
 		AulasLN negocio = new AulasLN();
 		List<Aula> edificio = new ArrayList<Aula>();
@@ -144,6 +144,8 @@ public class IntegrationTestNegocio {
 		negocio.setAulaDao(ejemplolistDao);
 		Aula aula = new Aula();
 		aula.setNombre("Alguna");
+		
+		negocio.nuevoAula(aula);
 		
 		negocio.eliminarAula("Alguna");
 		

@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.curso.java.oo.ejercicio01oo.model.Aula;
 
-public class UnitaryTestDao {
+public class UnitaryDaoTest {
 	
 	
 	
@@ -31,7 +31,7 @@ public class UnitaryTestDao {
 	
 	
 	@Test
-	public void testcreategetAula() {
+	public void creategetAulaTest() {
 		ListDao ejemplolistDao = new ListDao();
 		List<Aula> edificio = new ArrayList<Aula>();
 		ejemplolistDao.setEdificio(edificio);
@@ -42,7 +42,7 @@ public class UnitaryTestDao {
 	}
 	
 	@Test
-	public void testupdateAula() {
+	public void updateAulaTest() {
 		ListDao ejemplolistDao = new ListDao();
 		List<Aula> edificio = new ArrayList<Aula>();
 		ejemplolistDao.setEdificio(edificio);
@@ -55,7 +55,7 @@ public class UnitaryTestDao {
 	}
 	
 	@Test
-	public void testdeleteAula() {
+	public void deleteAulaTest() {
 		ListDao ejemplolistDao = new ListDao();
 		List<Aula> edificio = new ArrayList<Aula>();
 		ejemplolistDao.setEdificio(edificio);
